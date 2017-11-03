@@ -1,0 +1,537 @@
+
+@font-face {
+    font-family: 'lux';
+    src: url('../fonts/Close-to-you.ttf');
+}
+
+
+
+/* NAVBUTTON */
+.menu-on {
+    background-color: #DEB887;
+    opacity: 0.7;
+    color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    z-index: 1001;
+}
+.menu-off {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.01);
+    z-index: 1002;
+    display: none;
+    }
+/* NAVBUTTON */
+
+
+/* NAVBAR */
+nav.burger {
+    background-color: #DEB887;
+    opacity: 0.9;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 35px;
+    min-width: 50px;
+    z-index: 1003;
+    display: none;
+     
+}
+nav.burger a{
+    font-family: 'Poiret One';
+    font-size: 20px;
+    color: #000;
+    display: block;
+    margin: 15px 0;
+    padding: 5px 5px;
+}
+/* NAVBAR */
+
+
+/* LINKSTYLE */
+a:link,a:hover,a:active,a:checked{
+    text-decoration: none;
+}
+a.current {
+    text-decoration: underline;
+}
+/* LINKSTYLE */
+
+
+/* TOGGLENAVBAR */
+#toggle-menu {
+    display: none;
+}
+#toggle-menu:checked ~ nav.burger {
+    display: block;
+}
+#toggle-menu:checked ~ .menu-off {
+    display: block;
+}
+/* TOGGLENAVBAR */
+
+
+
+
+
+body  {
+    margin:0px;
+    padding:0px;
+        background-color: #F9F5E9;
+     
+}
+
+/* DESIGN TIPS */
+.destips {
+text-align: center;
+font-size: 50px;
+margin: 20px 5px;
+margin-top: 50px;
+font-family: 'Poiret One';
+    
+}
+.all p {
+    margin: 0 20px;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+    
+}
+.all h2{
+    font-family: 'Poiret One';
+    font-size: 30px;
+
+}
+.all p{
+
+}
+.all img {
+text-align: center;
+width: 100%;   
+}
+.image1 {
+text-align: center;
+grid-area: img1;
+    
+}
+.text1 {
+text-align: center;
+grid-area: txt1;
+    
+}
+.image2 {
+text-align: center;
+margin-top: 150px;
+grid-area: img2;
+}
+.text2 {
+text-align: center;
+    grid-area: img2;
+}
+.image3 {
+text-align: center;
+margin-top: 150px;
+    grid-area: img3;
+}
+.text3 {
+text-align: center;
+    grid-area: img3;
+}
+.image4 {
+text-align: center;
+margin-top: 150px;
+    grid-area: img4;
+}
+.text4 {
+text-align: center;
+    grid-area: img4;
+}
+.image5 {
+text-align: center;
+margin-top: 150px;
+    grid-area: img5;
+}
+.text5 {
+text-align: center;
+    grid-area: img5;
+}
+/* DESIGN TIPS */
+
+
+
+/* CONTACT MOBILE */
+.contact {
+    margin-top: 100px;
+}
+.text {
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    
+}    
+.vision {
+   background-color: #FFF;
+   font-size: 20px; 
+   font-family: 'Poiret One';
+   margin-top: 50px;
+   margin-bottom: 0;
+   text-align: center;
+    
+    }    
+.fa fa-mobile fa-4x {
+    padding: 15px;
+    border: 20px;
+    text-align: center;
+        
+    }
+.gridcontainer {
+        text-align: center;
+        
+    }
+.text {
+    padding: 5px;
+    grid-area: text;
+    margin:0;
+    
+}
+#mobile{
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+    }   
+#envelope {
+    padding: 5px;
+    margin: 20px;
+        
+    } 
+#map {
+        padding: 5px;
+        margin: 20px;
+    }
+/* CONTACT MOBILE */
+
+
+/* MEDIAQUERY */
+@supports (grid-area: auto) {
+@media screen and (min-width: 500px) {
+.fa fa-mobile fa-4x {
+    padding: 15px;
+    border: 20px;
+    text-align: center;
+    height: 150%;
+    width: 150%;
+        
+    }
+.burger {
+display: inline-block;    
+}
+.burger a {
+display: inline-block; 
+font-size: 30px
+}
+/* DESIGNTIPS */
+.all {
+        margin-top: 50px;
+        padding:0px;
+        background-color: #F9F5E9;
+        display: grid;
+        grid-template-columns: repeat (2, 50%);
+        grid-template-rows: repeat(5, 20%);
+        grid-template-areas: 
+                            "img1 txt1"
+                            "txt2 img2" 
+                            "img3 txt3"
+                            "txt4 img4" 
+                            "img5 txt5";  
+    grid-row-gap: 0px;
+}    
+.destips {
+text-align: center;
+font-size: 80px;
+margin: 20px 5px;
+margin-top: 100px;
+font-family: 'Poiret One';
+    
+}
+.all img {
+max-width: 100%;  
+align-content: center;
+height: 100%;
+width: 100%;
+}
+.all p {
+font-size: 30px;
+margin: 0 50px;
+font-family: 'Poiret One', cursive;
+}
+.all h2 {
+font-size: 55px;
+}
+.image1 {
+text-align: center;
+grid-area: img1;
+
+    
+}
+.text1 {
+text-align: center;
+grid-area: txt1;
+    align-self: center;
+    
+}
+.image2 {
+text-align: center;
+grid-area: img2;
+margin-bottom: 0px;
+
+}
+.text2 {
+text-align: center;
+    grid-area: txt2;
+     align-self: center;
+}
+.image3 {
+text-align: center;
+margin-bottom: 0px;
+    grid-area: img3;
+}
+.text3 {
+text-align: center;
+    grid-area: txt3;
+     align-self: center;
+}
+.image4 {
+    text-align: center;
+    grid-area: img4;
+    margin-bottom: 0px;
+}
+.text4 {
+    text-align: center;
+    grid-area: txt4;
+    align-self: center;
+}
+.image5 {
+    text-align: center;
+    margin-bottom: 0px;
+    grid-area: img5;
+
+}
+.text5 {
+    text-align: center;
+    grid-area: txt5;
+    align-self: center;
+}
+
+/* DESIGNTIPS */
+
+    
+/* CONTACTS */
+.vision {
+   background-color: #FFF;
+   font-size: 30px; 
+   font-family: cursive;
+   margin-top: 60px;
+   text-align: center;
+}
+p.vision {
+        font-family: 'Poiret One', cursive;
+        margin-top: 25px;
+}
+.text {
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+    margin-top: 50px;
+}   
+.mobile {
+    margin-left: 150px;
+
+}
+    
+ /* ICONS */   
+.gridcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    font-size: 20px;
+}  
+/* ICONS */ 
+/* CONTACTS */
+}}
+
+#banner {
+  width: 100%;
+  display: block; }
+
+#scroll a {
+  padding-top: 60px; }
+
+#scroll a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: 200px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box; }
+
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0); }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px); }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0); } }
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0); }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px); }
+  40% {
+    transform: rotate(-45deg) translate(0, 0); } }
+#mission {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  padding: 10px;
+  margin: 0;
+  font-family: 'Poiret One', cursive; }
+.productspage {
+    
+}
+.product-room {
+  position: relative; 
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden; }
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+.product-room:hover .image {
+  opacity: 0.3; 
+}
+.product-room:hover .middle {
+  opacity: 1; 
+}
+.text {
+  font-family: 'Poiret One', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #aa9985;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px; }
+.moodboard {
+  display: block;
+  width: 100%; }
+h1.products {
+    margin-top: 50px;
+    text-align: center;
+  font-family: 'Poiret One';
+    font-size: 50px;
+}
+#mood1 {
+  margin-top: 30px; 
+}
+.container {
+  position: relative; 
+}
+.image6 {
+  display: block;
+  width: 100%;
+  height: auto; }
+.text6 {
+    margin-top: 50px;
+    text-align: center;
+  font-family: 'Poiret One';
+    font-size: 50px;
+}
+
+
+a:link, a:visited, a:active {
+  text-decoration: none; }
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    #scroll a span {
+      margin-top: 800px; }
+
+    #mission {
+      font-size: 30px;
+      padding: 50px;
+      margin-bottom: 30px; }
+
+    .product-room {
+      margin: 30px; }
+
+    #mood1 {
+      margin-bottom: 60px; }
+.text6{
+    text-align: center;
+      font-size: 80px; 
+      font-family: 'Poiret One';
+}
+      
+.productspage {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      /*grid-template-rows: repeat(6, 16.6%);*/
+      grid-template-areas: "banner banner" "mission mission" "livingroom kitchen" "bedroom bathroom" "mood1 mood1" "mood2 mood3"; }
+
+    header {
+      grid-area: banner; }
+
+    #mission {
+      grid-area: mission; }
+
+    #livingroom {
+      grid-area: livingroom; }
+
+    #kitchen {
+      grid-area: kitchen; }
+
+    #bedroom {
+      grid-area: bedroom; }
+
+    #bathroom {
+      grid-area: bathroom; }
+
+    .container {
+      grid-area: mood1; }
+
+    #mood2 {
+      grid-area: mood2; }
+
+    #mood3 {
+      grid-area: mood3; } } }
+
+/*# sourceMappingURL=stylesheet.css.map */
